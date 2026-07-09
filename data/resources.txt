@@ -1,4 +1,5 @@
 employement
-https://searsbear.github.io/resources/
-for help with tenants
-*a tool for finding landlords and help wuth issues fifhting landlords*
+    employement
+    https://searsbear.github.io/OSINT/
+    Help with finding employement
+    *employment search tools for finding resources*
