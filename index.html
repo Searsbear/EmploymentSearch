@@ -220,6 +220,33 @@
             color: #ffffff !important; 
             border-left: 4px solid #ffffff;
         }
+
+        /* --- Global Expand/Collapse Controls --- */
+        .global-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .control-btn {
+            flex: 1;
+            background: var(--panel-bg);
+            border: 1px solid #334155;
+            color: var(--text);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .control-btn:hover {
+            background: #25334d;
+            border-color: var(--accent-blue);
+        }
+
     </style>
 </head>
 <body>
@@ -229,6 +256,12 @@
         <h3 class="main-title" data-i18n="main-title">Neurodivergent Employment Resource</h3>
         </h3>
         <span class="subtitle" data-i18n="subtitle">Checklist for finding and sustaining employment for neurodivergent youth</span>
+
+        <div class="global-controls">
+            <button class="control-btn" id="btn-open-all">Open All</button>
+            <button class="control-btn" id="btn-close-all">Close All</button>
+        </div>
+
 
         <div id="dynamic-resource-container">Compiling database...</div>
     </main>
@@ -375,6 +408,33 @@ function convertTextToHTML(text, colorClass) {
 
     return htmlOutput;
 }
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Select the buttons
+    const btnOpenAll = document.getElementById('btn-open-all');
+    const btnCloseAll = document.getElementById('btn-close-all');
+
+    // Add event listener to open all <details> elements
+    if (btnOpenAll) {
+        btnOpenAll.addEventListener('click', () => {
+            const allDetails = document.querySelectorAll('details.resource-group');
+            allDetails.forEach(details => {
+                details.open = true;
+            });
+        });
+    }
+
+    // Add event listener to close all <details> elements
+    if (btnCloseAll) {
+        btnCloseAll.addEventListener('click', () => {
+            const allDetails = document.querySelectorAll('details.resource-group');
+            allDetails.forEach(details => {
+                details.open = false;
+            });
+        });
+    }
+});
 </script>
 
 </body>
