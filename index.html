@@ -216,27 +216,38 @@
             color: #fb923c !important; 
             border-left: 4px solid #fb923c;
         }
+        .theme-qr-code {
+            color: #ffffff !important; 
+            border-left: 4px solid #ffffff;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
     <main>
-        <h3 class="main-title" data-i18n="main-title">RESOURCE DIRECTORY</h3>
-        <span class="subtitle" data-i18n="subtitle">Unified Asset Management & Tools</span>
+        <h3 class="main-title" data-i18n="main-title">Neurodivergent Employment Resource</h3>
+        </h3>
+        <span class="subtitle" data-i18n="subtitle">Checklist for finding and sustaining employment for neurodivergent youth</span>
 
-        <div id="dynamic-resource-container">Compiling database documents...</div>
+        <div id="dynamic-resource-container">Compiling database...</div>
     </main>
 
+    <div>
+        <details class="resource-group">
+            <summary class="resource-header theme-qr-code">QR Code</summary>
+            <div class="dropdown-content">
+                <img src="images/qr-code.png" style="width: 100%; max-width: 300px; display: block; margin: 10px auto;">
+            </div>
+    </div>
+
     <div class="lang-selector">
-        <button class="lang-btn" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="fr">FR</button>
         <button id="download-all-btn" class="lang-btn" style="margin-left: 10px; padding: 6px 15px;">
             📥 <span data-i18n="download-btn">Download All</span>
         </button>
     </div>
     
-    <span class="footer-disclaimer">Disclaimer: All compiled documentation pathways are provided "as is" for absolute convenience.</span>
+    <span class="footer-disclaimer">Disclaimer: All compiled resources are provided as is and compiled from many sources. Use at your own discretion.</span>
 </div>
 
 <script>
