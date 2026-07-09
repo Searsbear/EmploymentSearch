@@ -240,12 +240,6 @@
                 <img src="images/qr-code.png" style="width: 100%; max-width: 300px; display: block; margin: 10px auto;">
             </div>
     </div>
-
-    <div class="lang-selector">
-        <button id="download-all-btn" class="lang-btn" style="margin-left: 10px; padding: 6px 15px;">
-            📥 <span data-i18n="download-btn">Download All</span>
-        </button>
-    </div>
     
     <span class="footer-disclaimer">Disclaimer: All compiled resources are provided as is and compiled from many sources. Use at your own discretion.</span>
 </div>
@@ -265,8 +259,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     // 1. Structural File Assignment Matrix
     // Maps each explicit text database asset file path to its presentation layer theme class
     const dataFiles = [
-        { path: 'data/resources.txt', colorClass: 'theme-coordinator' },
-        { path: 'data/labour-market.txt', colorClass: 'theme-transport' }
+        { path: 'data/questionaire.txt', colorClass: 'theme-qr-code' },
+        { path: 'data/prepping.txt', colorClass: 'theme-rental' },
+        { path: 'data/labour-market.txt', colorClass: 'theme-transport' },
+        { path: 'data/finding-employers.txt', colorClass: 'theme-health' },
+        { path: 'data/resources.txt', colorClass: 'theme-coordinator' }
     ];
 
     let combinedHTML = "";
